@@ -11,7 +11,7 @@
         <h1>Ejercicios Modulo 2 - Recuerde abrir la consola</h1>
         <div class="ejercicios-content">
             <div class="ejercicios-content__item">
-                <h3>Ejercicio 1</h3>
+                <h3>Ejercicio 1 - Array operations</h3>
                 <p> 
                     <span>Head</span>Implementa una función head (inmutable), tal que, dado un array como entrada extraiga y devuelva su primer elemento. Utiliza destructuring.<br/>  
                     <span>Tail</span>Implementa una función tail (inmutable), tal que, dado un array como entrada devuelta todos menos el primer elemento. Utiliza rest operator.<br/>  
@@ -26,7 +26,7 @@
                 <button class="ejercicios-content__play" data-index="1">Imprimir resultado</button>
             </div>
             <div class="ejercicios-content__item">
-                <h3>Ejercicio 2</h3>
+                <h3>Ejercicio 2 - Concat</h3>
                 <p>
                     <span>Concat</span>Implementa una función concat (inmutable) tal que, dados 2 arrays como entrada, devuelva la concatenación de ambos. Utiliza rest / spread operators.<br/>  
                     <span>Opcional</span>Implementa una versión del ejercicio anterior donde se acepten múltiples arrays de entrada (más de 2).<br/>
@@ -36,17 +36,77 @@
                     Los arrays dados para realizar este ejercicio son:
                     <pre>const arrayTest = ['Illo','que dice', 'er tio', 'como', 'andas?'];</pre>
                     <pre>const arrayTest2 = ['Loco','pos yo bien', 'tu que, guay?', 'La pari bien?'];</pre>
+                    <pre>const arrayTest3 = ['Si', 'todo bien', 'mañana quedamos', 'me voy'];</pre>
                 </p>
                 <button class="ejercicios-content__play" data-index="2">Imprimir resultado</button>
             </div>
             <div class="ejercicios-content__item">
-
+                <h3>Ejercicio 3 - Clone Merge</h3>
+                <p>
+                    <span>Clone</span>Implementa una función clone que, a partir de un objeto de entrada source devuelva un nuevo objeto con las propiedades de source.<br/>  
+                    <span>Propuesta Clone</span>Implementar una funcion de clonado que haga deep clone y clone dentro de objetos anidados.<br/>  
+                    <span>Merge</span>Implementa una función merge que, dados dos objetos de entrada source y target, devuelva un nuevo objeto con todas las propiedades de target y de source, y en caso de propiedades con el mismo nombre, source sobreescribe a target.<br/>
+                                        
+                    <br>
+                    <span>--Resultado Clone--</span>
+                    Para el ejercicio del clone damos como parametro el siguiente objeto:
+                    <pre>const orginal = {
+    raza: 'oveja',
+    nombre:'mery',
+    propiedades: {
+        pelaje: 'lanuda',
+        color: 'blanco'
+    } 
+};
+                    </pre>
+                </p>
+                <button class="ejercicios-content__play" data-index="3-a">Imprimir resultado</button>
+                <p>
+                    <span>--Resultado Merge--</span>
+                    Para el ejercicio del merge damos como parametro los siguientes objetos:
+                    <pre>const a = { name: "Maria", surname: "Ibañez", country: "SPA" };</pre>
+                    <pre>const b = { name: "Luisa", age: 31, married: true };</pre>
+                </p>
+                <button class="ejercicios-content__play" data-index="3-b">Imprimir resultado</button>
             </div>
             <div class="ejercicios-content__item">
-
+                <h3>Ejercicio 4 - Read Books</h3>
+                <p>
+                    Crea una función isBookRead que reciba una lista de libros y un título y devuelva si se ha leído o no dicho libro. Un libro es un objeto con title como string y isRead como booleano. En caso de no existir el libro devolver false TIP: Existe un método de Array.prototype que te ayudará a buscar según un patrón.
+                                        
+                    <br>
+                    <span>--Resultado--</span>
+                    Los datos dados para realizar este ejercicio son:
+                    <pre>
+const books = [
+  { title: "Harry Potter y la piedra filosofal", isRead: true },
+  { title: "Canción de hielo y fuego", isRead: false },
+  { title: "Devastación", isRead: true },
+];
+                    </pre>
+                    Los resultados esperados son los siguientes:
+                    <pre>
+console.log(isBookRead(books, "Devastación")); // true
+console.log(isBookRead(books, "Canción de hielo y fuego")); // false
+console.log(isBookRead(books, "Los Pilares de la Tierra")); // false
+                    </pre>
+                </p>
+                <button class="ejercicios-content__play" data-index="4">Imprimir resultado</button>
             </div>
             <div class="ejercicios-content__item">
-
+                <h3>Ejercicio 5 - Slot Machine</h3>
+                <p>
+                    El objetivo de este ejercicio es crear una máquina tragaperras utilizando clases donde cada vez que juguemos insertemos una moneda. Cada máquina tragaperras (instancia) tendrá un contador de monedas que automáticamente se irá incrementando conforme vayamos jugando.
+<br><br>
+Cuando se llame al método play el número de monedas se debe incrementar de forma automática y debe generar tres booleanos aleatorios que representarán el estado de las 3 ruletas. El usuario habrá ganado en caso de que los tres booleanos sean true, y por tanto deberá mostrarse por consola el mensaje:
+<pre>"Congratulations!!!. You won número de monedas coins!!";</pre>    
+y reiniciar las monedas almacenadas, ya que las hemos conseguido y han salido de la máquina. En caso contrario deberá mostrar otro mensaje:
+<pre>"Good luck next time!!".</pre>                           
+                    <br>
+                    <span>--Resultado--</span>
+                    Se considera que siempre se juega en la misma ruleta pero podrian ser creadas nuevas.
+                </p>
+                <button class="ejercicios-content__play" data-index="5">Imprimir resultado</button>
             </div>
         </div>
     </main>
